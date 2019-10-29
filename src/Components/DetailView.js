@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { PropTypes } from 'prop-types'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 import MoveList from './MoveList';
 
-const DefaultView = (props) => {
+const DetailView = (props) => {
 
   const [hidden, isHidden] = useState(true)
 
@@ -35,4 +36,9 @@ const DefaultView = (props) => {
   )
 }
 
-export default DefaultView
+DetailView.propTypes = {
+  moveDetails: PropTypes.object,
+  pokemon: PropTypes.object
+}
+
+export default DetailView
