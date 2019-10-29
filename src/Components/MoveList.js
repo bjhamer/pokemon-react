@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 
 const MoveList = (props) => {
     return (
@@ -13,5 +14,10 @@ const MoveList = (props) => {
     )
 }
 
+MoveList.propTypes = {
+    moveList: PropTypes.array,
+    movePower: PropTypes.number,
+    moveAccuracy: PropTypes.number
+}
 
 export default MoveList
